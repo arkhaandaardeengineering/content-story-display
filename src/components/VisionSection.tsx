@@ -110,7 +110,7 @@ export const VisionSection = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/a76WCuEO44s"
+              src="https://www.youtube.com/embed/eh8vfEcVxDo"
               title="Arkha & Aarde Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
