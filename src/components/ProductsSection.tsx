@@ -78,7 +78,7 @@ export const ProductsSection = () => {
             Our Products
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-2 mb-6">
-            Hybrid Submersible BLDC Pumpset
+            Hybrid Submersible BLDC Pumping Technology
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
             A revolutionary solution that smoothly integrates electrical and solar power, 

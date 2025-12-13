@@ -163,11 +163,18 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Address</h4>
-                    <p className="text-muted-foreground text-sm">
-                      Arkha & Aarde Pvt. Ltd.
+                    <a 
+                      href="https://share.google/oY4T6SAo8k5OJQDtX" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                    >
+                      Plot No: SVCIE, 65, Sri Venkateshwara Co-op Industrial Estate,
                       <br />
-                      Hyderabad, India
-                    </p>
+                      Kukatpally Industrial Estate, Balanagar,
+                      <br />
+                      Hyderabad, Telangana 500037
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -176,9 +183,12 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                    <p className="text-muted-foreground text-sm">
-                      +91 XXXXX XXXXX
-                    </p>
+                    <a 
+                      href="tel:+919966224425" 
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                    >
+                      +91 9966224425
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -187,9 +197,12 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground text-sm">
-                      info@arkhaandfaarde.com
-                    </p>
+                    <a 
+                      href="mailto:reach@arkha-aarde.com" 
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                    >
+                      reach@arkha-aarde.com
+                    </a>
                   </div>
                 </div>
               </div>
