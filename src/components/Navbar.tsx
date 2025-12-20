@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import navbarLogo from "@/assets/navbar-logo.png";
+import navbarLogo from "@/assets/navbar-logo.jpg";
 
 const navLinks = [
   { href: "#home", label: "Home" },
