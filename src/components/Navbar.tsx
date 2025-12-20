@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import navbarLogo from "@/assets/navbar-logo.png";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -36,16 +37,12 @@ export const Navbar = () => {
       )}
     >
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-gradient-hero flex items-center justify-center">
-            <span className="font-display font-bold text-primary-foreground text-xl">A</span>
-          </div>
-          <span className={cn(
-            "font-display font-bold text-xl transition-colors",
-            isScrolled ? "text-foreground" : "text-primary-foreground"
-          )}>
-            Arkha & Aarde
-          </span>
+        <a href="#home" className="flex items-center">
+          <img 
+            src={navbarLogo} 
+            alt="Arkha & Aarde" 
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
