@@ -3,12 +3,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, Lightbulb, Leaf, Zap } from "lucide-react";
 
-const stats = [
-  { value: "36+", label: "Years Experience" },
-  { value: "1000+", label: "Pumps Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "50+", label: "Partners" },
-];
 
 const features = [
   {
@@ -57,26 +51,6 @@ export const AboutSection = () => {
             experience combine with innovation. We have a long 36-year legacy in the pumping 
             industry and are known for our precision, reliability, and quality.
           </p>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
-        >
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-xl p-6 text-center shadow-card border border-border"
-            >
-              <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">
-                {stat.value}
-              </div>
-              <div className="text-muted-foreground text-sm">{stat.label}</div>
-            </div>
-          ))}
         </motion.div>
 
         {/* Features Grid */}
