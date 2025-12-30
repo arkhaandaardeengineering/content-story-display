@@ -15,33 +15,29 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 pt-28 pb-20 min-h-screen flex flex-col justify-center text-center" style={{ paddingTop: '55%' }}>
+      <div className="relative container mx-auto px-4 min-h-screen flex flex-col text-center">
+        {/* Top Badge - positioned above the background "Each pump" text */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="pt-28"
+        >
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium backdrop-blur-sm border border-primary-foreground/20">
+            36 Years of Excellence in Pump Manufacturing
+          </span>
+        </motion.div>
+
+        {/* Spacer to push bottom content down */}
+        <div className="flex-1" />
+
+        {/* Bottom Content - positioned below the background content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto pb-20"
         >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 mb-6 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium backdrop-blur-sm border border-primary-foreground/20"
-          >
-            36 Years of Excellence in Pump Manufacturing
-          </motion.span>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground mb-6 leading-tight"
-          >
-            Sustainable Pumping
-            <br />
-            <span className="text-accent">Technology</span>
-          </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
