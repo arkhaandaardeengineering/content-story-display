@@ -1,38 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Check, Sun, Zap, Settings, Shield } from "lucide-react";
-
-const motorFeatures = [
-  "High-efficiency permanent magnet brushless technology",
-  "Minimal maintenance required",
-  "Low running costs with lower winding temperatures",
-  "Motor burnout prevented by intelligent controller",
-  "IP68 protection rating",
-  "Pressure-balanced structure",
-  "Hydrodynamic journal and thrust bearings",
-  "IS8034:2018 compliant",
-];
-
-const pumpFeatures = [
-  "Designed for years of reliability and durability",
-  "Increased efficiency",
-  "Sturdy robust connection for easy management",
-  "Superior shaft bearings with low friction",
-  "Stainless steel/cast iron impellers and diffusers",
-  "Stainless steel strainer for sand prevention",
-];
-
-const controllerFeatures = [
-  "Robust electronic components for longevity",
-  "Efficient fan-cooled power electronics",
-  "Built-in fault protection mechanisms",
-  "Minimizes energy loss",
-  "Secure outdoor installation features",
-  "AC power input: 240-450V",
-  "Emergency supply disconnect switch",
-  "Digital display with user-friendly interface",
-];
+import { Sun, Zap, Shield, Settings, Droplets, Factory, Building2, Waves, TreeDeciduous, Home, Sprout, Droplet } from "lucide-react";
 
 const highlights = [
   {
@@ -59,6 +28,48 @@ const highlights = [
     description:
       "Water your fields throughout the day without high electricity costs.",
   },
+];
+
+const motorSpecs = {
+  motor: [
+    { label: "Motor Type", value: "BLDC" },
+    { label: "Voltage Max", value: "650 VDC / 425 VAC" },
+    { label: "Speed", value: "2850 RPM" },
+    { label: "Bore Size", value: "150 mm or above" },
+    { label: "H.P", value: "5.0 / 7.5" },
+    { label: "kW", value: "3.7 / 5.5" },
+  ],
+  construction: [
+    { label: "Motor Body", value: "SS" },
+    { label: "Motor Shaft", value: "SS" },
+    { label: "Stamping", value: "CRNO" },
+    { label: "Rotor", value: "Permanent Magnet" },
+    { label: "Winding", value: "Copper" },
+  ],
+};
+
+const features = [
+  "High efficiency, Permanent magnet brushless Technology",
+  "Minimal Maintenance, Motor burnout prevented",
+  "Special non-contaminating anti rust solution prefilled",
+  "Journal bearings with Hydrodynamics",
+  "Constructional Requirements as per IS: 9283: 2013",
+  "Complete SS motor with Nema coupling",
+];
+
+const applications = [
+  { icon: Sprout, label: "Agriculture" },
+  { icon: Factory, label: "Industrial Corridors" },
+  { icon: Droplets, label: "Water Supply Systems" },
+  { icon: Waves, label: "Pressure Boostings" },
+  { icon: Droplet, label: "Fountains" },
+  { icon: Building2, label: "Multi Storied Buildings" },
+  { icon: TreeDeciduous, label: "Sprinkler Irrigation" },
+  { icon: Droplet, label: "Drip Irrigation" },
+  { icon: Waves, label: "Flow Irrigation" },
+  { icon: Factory, label: "Washing Plants" },
+  { icon: Home, label: "Modern Townships" },
+  { icon: Home, label: "Residential Villas" },
 ];
 
 export const ProductsSection = () => {
@@ -111,83 +122,100 @@ export const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Feature Sections */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Motor Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-hero flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
+        {/* Motor Specifications */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-8">
+            BLDC Motor Specifications
+          </h3>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Motor Specs */}
+            <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
+              <h4 className="font-display font-bold text-xl text-foreground mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-gradient-hero flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-primary-foreground" />
+                </div>
+                Motor
+              </h4>
+              <div className="space-y-3">
+                {motorSpecs.motor.map((spec, index) => (
+                  <div key={index} className="flex justify-between py-2 border-b border-border last:border-0">
+                    <span className="text-muted-foreground">{spec.label}</span>
+                    <span className="font-medium text-foreground">{spec.value}</span>
+                  </div>
+                ))}
               </div>
-              <h3 className="font-display font-bold text-xl text-foreground">
-                BLDC Motor
-              </h3>
             </div>
-            <ul className="space-y-3">
-              {motorFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-sm">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
 
-          {/* Pump Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                <Settings className="w-5 h-5 text-secondary-foreground" />
+            {/* Construction Specs */}
+            <div className="bg-card rounded-2xl p-8 shadow-card border border-border">
+              <h4 className="font-display font-bold text-xl text-foreground mb-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                  <Settings className="w-5 h-5 text-secondary-foreground" />
+                </div>
+                Construction
+              </h4>
+              <div className="space-y-3">
+                {motorSpecs.construction.map((spec, index) => (
+                  <div key={index} className="flex justify-between py-2 border-b border-border last:border-0">
+                    <span className="text-muted-foreground">{spec.label}</span>
+                    <span className="font-medium text-foreground">{spec.value}</span>
+                  </div>
+                ))}
               </div>
-              <h3 className="font-display font-bold text-xl text-foreground">
-                Pump Features
-              </h3>
             </div>
-            <ul className="space-y-3">
-              {pumpFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-sm">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Controller Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <Shield className="w-5 h-5 text-accent-foreground" />
-              </div>
-              <h3 className="font-display font-bold text-xl text-foreground">
-                Controller
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              {controllerFeatures.map((feature, index) => (
+        {/* Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-8">
+            Features
+          </h3>
+          <div className="bg-card rounded-2xl p-8 shadow-card border border-border max-w-3xl mx-auto">
+            <ul className="grid md:grid-cols-2 gap-4">
+              {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-sm">{feature}</span>
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="text-muted-foreground">{feature}</span>
                 </li>
               ))}
             </ul>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
+
+        {/* Applications */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-8">
+            Applications
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {applications.map((app, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-xl p-4 shadow-card border border-border flex items-center gap-3 hover:border-primary/30 transition-colors"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <app.icon className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-medium text-foreground text-sm">{app.label}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
