@@ -21,7 +21,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="pt-28"
+          style={{ paddingTop: "calc(7rem + 30px)" }}
         >
           <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium backdrop-blur-sm border border-primary-foreground/20">
             36 Years of Excellence in Pump Manufacturing
@@ -31,23 +31,32 @@ export const HeroSection = () => {
         {/* Spacer to push bottom content down */}
         <div className="flex-1" />
 
-        {/* Bottom Content - positioned below the background content */}
+        {/* Bottom Content - positioned on the background image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto pb-20"
+          className="max-w-4xl mx-auto pb-32"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Experience the breakthrough of our Hybrid Submersible BLDC Pumpsets — 
-            seamlessly combining solar and electric power for a greener, 
-            more efficient future in agriculture.
+            Experience the breakthrough of our Hybrid Submersible BLDC Pumpsets — seamlessly combining solar and electric power for a greener, more efficient future in agriculture.
           </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-8 leading-tight"
+          >
+            Sustainable Pumping
+            <br />
+            <span className="text-accent">Technology</span>
+          </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
