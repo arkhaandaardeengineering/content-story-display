@@ -15,7 +15,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 pt-28 pb-20 min-h-screen flex flex-col justify-end text-center">
+      <div className="relative container mx-auto px-4 pt-28 pb-20 min-h-screen flex flex-col justify-center text-center" style={{ paddingTop: '55%' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
