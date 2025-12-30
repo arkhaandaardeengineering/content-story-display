@@ -30,35 +30,35 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-section">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-gradient-section">
       <div className="container mx-auto px-4" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">
             Get In Touch
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-2 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold text-foreground mt-2 mb-4 sm:mb-6 px-2">
             Contact Us
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Ready to transform your agricultural irrigation? Get in touch with us 
             to learn more about our Hybrid Submersible BLDC Pumpsets.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card rounded-2xl p-8 shadow-card border border-border"
+            className="bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-card border border-border"
           >
-            <h3 className="font-display font-bold text-2xl text-foreground mb-6">
+            <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl text-foreground mb-4 sm:mb-6">
               Send us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -139,35 +139,35 @@ export const ContactSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-4 sm:gap-6 md:gap-8"
           >
-            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
-              <h3 className="font-display font-bold text-2xl mb-4">
+            <div className="bg-gradient-hero rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-primary-foreground">
+              <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4">
                 Let's Work Together
               </h3>
-              <p className="text-primary-foreground/90 leading-relaxed">
+              <p className="text-primary-foreground/90 leading-relaxed text-sm sm:text-base">
                 Whether you're a farmer looking to upgrade your irrigation system 
                 or a government organization interested in sustainable agriculture 
                 solutions, we're here to help.
               </p>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 shadow-card border border-border flex-1">
-              <h3 className="font-display font-bold text-xl text-foreground mb-6">
+            <div className="bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-card border border-border flex-1">
+              <h3 className="font-display font-bold text-base sm:text-lg md:text-xl text-foreground mb-4 sm:mb-6">
                 Contact Information
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Address</h4>
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base mb-1">Address</h4>
                     <a 
                       href="https://share.google/oY4T6SAo8k5OJQDtX" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                      className="text-muted-foreground text-xs sm:text-sm hover:text-primary transition-colors"
                     >
                       Plot No: SVCIE, 65, Sri Venkateshwara Co-op Industrial Estate,
                       <br />
@@ -177,29 +177,29 @@ export const ContactSection = () => {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Phone</h4>
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base mb-1">Phone</h4>
                     <a 
                       href="tel:+919966224425" 
-                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                      className="text-muted-foreground text-xs sm:text-sm hover:text-primary transition-colors"
                     >
                       +91 9966224425
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base mb-1">Email</h4>
                     <a 
                       href="mailto:reach@arkha-aarde.com" 
-                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                      className="text-muted-foreground text-xs sm:text-sm hover:text-primary transition-colors"
                     >
                       reach@arkha-aarde.com
                     </a>

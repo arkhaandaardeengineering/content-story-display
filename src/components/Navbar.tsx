@@ -35,12 +35,12 @@ export const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center">
           <img 
             src={arkhaLogo} 
             alt="Arkha & Aarde Engineering Pvt. Ltd." 
-            className="h-12 w-auto"
+            className="h-10 md:h-12 w-auto"
           />
         </a>
 
