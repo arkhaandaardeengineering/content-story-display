@@ -7,18 +7,18 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-end justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})`, backgroundColor: 'hsl(var(--foreground))' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/30 to-foreground/90" />
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-32 text-center">
+      <div className="relative container mx-auto px-4 pb-24 pt-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
