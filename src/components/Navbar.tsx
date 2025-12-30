@@ -51,10 +51,8 @@ export const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={cn(
-                "font-medium transition-colors hover:text-primary",
-                isScrolled ? "text-foreground" : "text-primary-foreground"
-              )}
+              className="font-medium transition-colors hover:text-primary"
+              style={{ color: "#3e998e" }}
             >
               {link.label}
             </a>
