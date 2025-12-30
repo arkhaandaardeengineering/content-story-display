@@ -8,8 +8,8 @@ export const HeroSection = () => {
     <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-contain bg-no-repeat bg-[position:center_30%]"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: "#ffffff" }}
+        className="absolute inset-0 bg-contain bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: "#ffffff", backgroundPosition: "center calc(30% - 30px)" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/25 to-foreground/90" />
       </div>
