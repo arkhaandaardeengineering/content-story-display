@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import navbarLogo from "@/assets/navbar-logo.jpg";
+import arkhaLogo from "@/assets/arkha-logo.jpeg";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
   { href: "#vision", label: "Vision" },
   { href: "#products", label: "Products" },
   { href: "#team", label: "Team" },
@@ -39,9 +38,9 @@ export const Navbar = () => {
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center">
           <img 
-            src={navbarLogo} 
-            alt="Arkha & Aarde" 
-            className="h-10 w-auto"
+            src={arkhaLogo} 
+            alt="Arkha & Aarde Engineering Pvt. Ltd." 
+            className="h-12 w-auto"
           />
         </a>
 
