@@ -11,8 +11,8 @@ export const HeroSection = () => {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: 'hsl(var(--foreground))' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
       </div>
