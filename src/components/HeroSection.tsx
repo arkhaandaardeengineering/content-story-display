@@ -5,20 +5,17 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-end justify-center overflow-hidden"
-    >
+    <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: 'hsl(var(--foreground))' }}
+        className="absolute inset-0 bg-contain bg-no-repeat bg-[position:center_30%]"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: "hsl(var(--foreground))" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/30 to-foreground/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/25 to-foreground/90" />
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 pb-24 pt-8 text-center">
+      <div className="relative container mx-auto px-4 pt-28 pb-20 min-h-screen flex flex-col justify-end text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
